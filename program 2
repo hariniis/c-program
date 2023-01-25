@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main (void)
+{ 
+int number ,reminder ,reverse=0;
+printf("enter the value:");
+scanf("%d",&number);
+while (number>0)
+{
+	reminder=number%10;
+	reverse=reverse*10+reminder;
+	number=number/10;
+}
+printf("the reversed value is =%d",reverse);
+}
