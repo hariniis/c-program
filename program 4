@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(void)
+{
+	int reminder,sum=0,i,num;
+	printf("enter the number:");
+	scanf("%d", &num);
+	for(i=1; i<num;i++)
+	{
+		reminder=num%i;
+		if(reminder==0)
+		{
+			sum=sum +i;
+		}
+	}
+		if (num=sum)
+		printf("%d is a perfect number",num);
+		else
+           printf(" is not a perfect number",num);
+         return 0;  
+       }
+			
+		
