@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void solve(int n, int k) {
+   int andMax = 0, orMax = 0, xorMax = 0;
+   int value1 = 0, value2 = 0, value3 = 0;
+   for (int i = 1; i <= n; i++) {
+      for (int j = i+1; j <= n; j++) {
+         value1 = i & j;
+         value2 = i | j;
+         value3 = i ^ j;
+         if (value1 > andMax && value1 < k)
+            andMax = value1;
+         if (value2 > orMax && value2 < k)
+            orMax = value2;
+         if (value3 > xorMax && value3 < k)
+            xorMax = value3;
+      }
+   }
+   printf("%d %d %d ", andMax, orMax, xorMax);
+}
+int main() {
+   solve(5, 5);
+   return 0;
+}
